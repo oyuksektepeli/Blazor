@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
 WORKDIR /src
-COPY ["Blazor/Blazor/Blazor.csproj", "Blazor/"]
+COPY ["Blazor.csproj", "Blazor/"]
 RUN dotnet restore "Blazor/Blazor.csproj"
 COPY . .
 WORKDIR "/src/Blazor"
