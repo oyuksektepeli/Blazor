@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: macwebapp-deployment
+  name: blazor-deployment
   labels:
-    app: macwebapp
+    app: blazor
 spec:
   replicas: 3
   template:
     metadata:
-      name: macwebapp
+      name: blazor
       labels:
-        app: macwebapp
+        app: blazor
     spec:
       containers:
-      - name: macwebapp
+      - name: blazor
         image: yuksektek.azurecr.io/oyuksektepeli/blazor:latest
         imagePullPolicy: Always
       restartPolicy: Always
   selector:
     matchLabels:
-      app: macwebapp
+      app: blazor
 
 
 ---
@@ -27,10 +27,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: monolithapp-service
+  name: blazor-service
 spec:
   selector:
-    app: macwebapp
+    app: blazor
   ports:
     - port: 80
   type: LoadBalancer
