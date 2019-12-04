@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: macwebapp
-        image: macacr01.azurecr.io/macwebapp:v1
-        imagePullPolicy: IfNotPresent
+        image: yuksektek.azurecr.io/oyuksektepeli/blazor:latest
+        imagePullPolicy: Always
       restartPolicy: Always
   selector:
     matchLabels:
@@ -27,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: macwebapp-service
+  name: monolithapp-service
 spec:
   selector:
     app: macwebapp
