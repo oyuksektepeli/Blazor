@@ -34,6 +34,13 @@
       "httpPort": 52147,
       "useSSL": true,
       "sslPort": 44386
+    },
+    "Azure Dev Spaces": {
+      "commandName": "AzureDevSpaces",
+      "launchBrowser": true,
+      "resourceGroup": "nc-aks-rg",
+      "aksName": "ncaks",
+      "subscriptionId": "7fd89b16-0998-418f-ac17-236f38d101bc"
     }
   }
 }
